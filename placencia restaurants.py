@@ -6,7 +6,7 @@ Created on Fri May 20 14:57:03 2016
 """
 
 import csv
-with open(r'C:\Users\Tony\Desktop\Lynda Coding\Belize\whp_locations_copy.csv') as csvfile:
+with open() as csvfile: #CSV Path goes here
     reader = csv.DictReader(csvfile)
     
 
@@ -18,7 +18,7 @@ def main():
   if (x == 'Monday') or (x == 'monday'):
     import csv
 
-    with open(r'C:\Users\Tony\Desktop\Lynda Coding\Belize\whp_locations_copy.csv', 'rt') as f:
+    with open(, 'rt') as f: #CSV path goes here
         reader = csv.DictReader(f)
         rows = [row for row in reader if row['open_mon'] == 'yes']
 
@@ -32,7 +32,7 @@ def main():
   elif(x == 'Tuesday') or (x == 'tuesday'):
     import csv
 
-    with open(r'C:\Users\Tony\Desktop\Lynda Coding\Belize\whp_locations_copy.csv', 'rt') as f:
+    with open(, 'rt') as f: #CSV path goes here
         reader = csv.DictReader(f)
         rows = [row for row in reader if row['open_tue'] == 'yes']
 
@@ -43,7 +43,7 @@ def main():
   elif(x == 'Wednesday') or (x == 'wednesday'):
     import csv
 
-    with open(r'C:\Users\Tony\Desktop\Lynda Coding\Belize\whp_locations_copy.csv', 'rt') as f:
+    with open(, 'rt') as f: #CSV path goes here
         reader = csv.DictReader(f)
         rows = [row for row in reader if row['open_wed'] == 'yes']
 
@@ -54,7 +54,7 @@ def main():
   elif(x == 'Thursday') or (x == 'thursday'):
     import csv
 
-    with open(r'C:\Users\Tony\Desktop\Lynda Coding\Belize\whp_locations_copy.csv', 'rt') as f:
+    with open(, 'rt') as f: #CSV path goes here
         reader = csv.DictReader(f)
         rows = [row for row in reader if row['open_thur'] == 'yes']
 
@@ -65,7 +65,7 @@ def main():
   elif(x == 'Friday') or (x == 'friday'):
     import csv
 
-    with open(r'C:\Users\Tony\Desktop\Lynda Coding\Belize\whp_locations_copy.csv', 'rt') as f:
+    with open(, 'rt') as f: #CSV path goes here
         reader = csv.DictReader(f)
         rows = [row for row in reader if row['open_fri'] == 'yes']
 
@@ -79,7 +79,7 @@ def main():
   elif(x == 'Saturday') or (x == 'saturday'):
     import csv
 
-    with open(r'C:\Users\Tony\Desktop\Lynda Coding\Belize\whp_locations_copy.csv', 'rt') as f:
+    with open(, 'rt') as f: #CSV path goes here
         reader = csv.DictReader(f)
         rows = [row for row in reader if row['open_sat'] == 'yes']
 
@@ -93,7 +93,7 @@ def main():
   elif(x == 'Sunday') or (x == 'sunday'):
     import csv
 
-    with open(r'C:\Users\Tony\Desktop\Lynda Coding\Belize\whp_locations_copy.csv', 'rt') as f:
+    with open(, 'rt') as f: #CSV path goes here
         reader = csv.DictReader(f)
         rows = [row for row in reader if row['open_sun'] == 'yes']
 
@@ -103,7 +103,6 @@ def main():
     
   else:
       print('Please try a different search term')
-
 
 
 #Need to make this only print with the if elif clauses and not print if the else block displays    
