@@ -12,44 +12,7 @@ import csv
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# Method One As Usual.
-
-def which_day(day):
-  """
-  Info  : Just a function to present the output.
-  """
-
-  with open('placencia_food.csv', 'rt') as f:
-    reader = csv.DictReader(f)
-    rows = [row for row in reader if row[day] == 'yes']
-
-    for row in rows:
-      print (row['restaurant_name'], row['operating_hours'], '\n')
-  f.close()
-
-
-# open_sun  open_mon  open_tue  open_wed  open_thur open_fri  open_sat
-
-day_dict = {
-    'sunday': 'open_sun',
-    'monday': 'open_mon',
-    'tuesday': 'open_tue',
-    'wednesday': 'open_wed',
-    'thursday': 'open_thur',
-    'friday': 'open_fri',
-    'saturday': 'open_sat',
-    }
-
-if __name__ == '__main__':
-  while True:
-    user_input = raw_input("What's open right now? :").lower()
-    if user_input in day_dict.keys():
-      print which_day(day_dict[user_input])
-    else:
-      print "I know You're Hungry. .Can you Please enter a Valid Day. .!!"
-
-
-# Method Two with Class
+# Method using Class
 
 class Resto(object):
 
