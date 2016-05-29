@@ -46,9 +46,9 @@ PV = Resto()
 
 if __name__ == '__main__':
   while True:
-    user_input = raw_input("What's open right now? :").lower()
+    user_input = input("What's open right now? :").lower()
     if user_input in PV.day_dict.keys():
-      print PV.which_day(PV.day_dict[user_input])
+      print(PV.which_day(PV.day_dict[user_input]))
     else:
       print "I know You're Hungry. .Can you Please enter a Valid Day. .!!"
 
