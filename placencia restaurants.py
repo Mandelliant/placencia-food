@@ -35,9 +35,11 @@ class Resto(object):
       with open('placencia_food.csv', 'rt') as f:
         reader = csv.DictReader(f)
         rows = [row for row in reader if row[day] == 'yes']
+        x = ' '
         for row in rows:
-          print (row['restaurant_name'], row['operating_hours'],
-                   '\n')
+            x = x + row['restaurant_name']+ ' ' + row['operating_hours']+'\n'+'\n'
+        return x
+          
 
       f.close()
 
@@ -46,10 +48,15 @@ PV = Resto()
 
 if __name__ == '__main__':
   while True:
-    user_input = input("What's open right now? :").lower()
+    user_input = input("Find out what's open! Please enter a day of the week: ").lower()
     if user_input in PV.day_dict.keys():
-      print(PV.which_day(PV.day_dict[user_input]))
+        print(PV.which_day(PV.day_dict[user_input]))
+      
+    elif user_input == 'end'
+        break
+    
     else:
-      print "I know You're Hungry. .Can you Please enter a Valid Day. .!!"
-
+      print()  
+      print("I know you're hungry, can you Please enter a valid day!")
+      print()
       
